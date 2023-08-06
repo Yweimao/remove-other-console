@@ -2,7 +2,8 @@
   "name": "remove-other-console",
   "version": "1.0.0",
   "description": "移除别人的console插件",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "dependencies": {
     "rollup": "^3.27.2"
   },
@@ -15,7 +16,8 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",

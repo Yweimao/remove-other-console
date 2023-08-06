@@ -1,9 +1,6 @@
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
 import { uglify } from "rollup-plugin-uglify";
-import json from "@rollup/plugin-json";
-
+import resolve from "rollup-plugin-node-resolve";
 const paths = {
   input: {
     root: "src/index.js",
@@ -12,7 +9,6 @@ const paths = {
     root: "dist/",
   },
 };
-
 const fileName = `index.js`;
 
 export default {
@@ -23,9 +19,7 @@ export default {
     name: "remove-other-console",
   },
   plugins: [
-    json(),
     resolve(),
-    commonjs(),
     babel({
       exclude: "node_modules/**",
       runtimeHelpers: true,
